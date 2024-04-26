@@ -33,11 +33,4 @@ public class UserEntity {
             cascade = CascadeType.ALL
     )
     private List<CategoryEntity> categories = new ArrayList<>();
-
-    @OneToMany(
-            mappedBy = "user",
-            cascade = CascadeType.ALL
-    )
-    private List<TaskEntity> tasks = new ArrayList<>();
-
 }
