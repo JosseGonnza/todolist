@@ -29,7 +29,7 @@ public class TaskEntity {
     private String content;
 
     private LocalDateTime createdAt;
-    private Boolean done;
+    // private Boolean done;
 
     @ManyToOne(
             fetch = FetchType.LAZY
@@ -37,10 +37,9 @@ public class TaskEntity {
     @JoinColumn(name = "user_id")
     private UserEntity user;
 
-    @OneToMany(
-            mappedBy = "task",
-            cascade = CascadeType.ALL
+    @ManyToOne(
+            fetch = FetchType.LAZY
     )
     @JoinColumn(name = "category_id")
-    private List<CategoryEntity> categories = new ArrayList<>();
+    private CategoryEntity category;
 }
