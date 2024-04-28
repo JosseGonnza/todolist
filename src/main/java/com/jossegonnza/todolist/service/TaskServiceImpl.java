@@ -28,7 +28,7 @@ public class TaskServiceImpl implements TaskService{
 
     @Override
     public List<TaskEntity> getTaskByCategoryId(Long categoryId) {
-        return taskRepository.finByCategoryId(categoryId);
+        return taskRepository.findByCategoryId(categoryId);
     }
 
     @Override
