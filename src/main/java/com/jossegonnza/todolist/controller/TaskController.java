@@ -16,6 +16,7 @@ import java.time.LocalDateTime;
 
 @Controller
 @RequestMapping("/task")
+@CrossOrigin(origins = "http://localhost:4200")
 public class TaskController {
 
     @Autowired
