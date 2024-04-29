@@ -5,11 +5,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 body{
     background-color: #080710;
 }
-
 .background{
     width: 100%;
     height: 100%;
@@ -25,8 +23,8 @@ body{
 }
 
 .shape-left{
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 350px;
     background: linear-gradient(
         #1845ad,
         #23a2f6
@@ -36,19 +34,19 @@ body{
 }
 
 .shape-right{
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     background: linear-gradient(
         to right,
         #ff512f,
         #f09819
     );
-    right: 20%;
+    right: 30%;
     bottom: 20%;
 }
 
 form{
-  height: 600px; /* Aumenta la altura del formulario */
+  height: 750px; /* Aumenta la altura del formulario */
   width: 400px;
   background-color: rgba(255,255,255,0.13);
   position: absolute;
@@ -59,7 +57,7 @@ form{
   backdrop-filter: blur(30px);
   border: 2px solid rgba(255,255,255,0.1);
   box-shadow: 0 0 40px rgba(8,7,16,0.6);
-  padding: 50px 35px;
+  padding: 30px 35px;
 }
 
 form *{
@@ -102,10 +100,10 @@ input{
 }
 
 button{
-    margin-top: 50px;
+    margin-top: 35px;
     width: 100%;
-    background-color: #000000;
-    color: #080710;
+    background-color: #0a0a0a;
+    color: #e5e5e5;
     padding: 15px 0;
     font-size: 18px;
     font-weight: 600;
@@ -114,10 +112,11 @@ button{
 }
 
 .register{
-    margin-top: -50px;
+    margin-top: 10px;
     display: flex;
     font-weight: 100;
     opacity: 50%;
+    justify-content: center;
 }
 
 .register div{
