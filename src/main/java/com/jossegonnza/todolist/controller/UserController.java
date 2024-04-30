@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.Optional;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/index")
 @CrossOrigin(origins = "http://localhost:4200")
 public class UserController {
 
@@ -37,7 +37,7 @@ public class UserController {
         return "redirect:/index";
     }
 
-    @GetMapping(value = {"/index", "/"})
+    @GetMapping(value = "/index")
     public String loginPage() {
         return "/users/index";
     }
@@ -48,7 +48,7 @@ public class UserController {
 
         if (optionalUser.isPresent()) {
             session.setAttribute("user_session_id", optionalUser.get().getId());
-            return "redirect:/post/home";
+            return "redirect:/categories/home";
         } else {
             return "redirect:/index";
         }

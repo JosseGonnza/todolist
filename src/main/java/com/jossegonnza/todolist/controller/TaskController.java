@@ -37,7 +37,7 @@ public class TaskController {
 
         taskService.createTask(task);
 
-        return "redirect:/category/categoryPage";
+        return "redirect:/categories/categoryPage";
     }
 
     @GetMapping("/edit/{id}")
@@ -54,7 +54,7 @@ public class TaskController {
         TaskEntity taskDB = taskService.getTaskById(id).orElseThrow(() -> new IllegalArgumentException("Invalid task ID"));
         taskService.updateTask(id, task);
 
-        return "redirect:/category/categoryPage" + taskDB.getCategory().getId();
+        return "redirect:/categories/categoryPage" + taskDB.getCategory().getId();
     }
 
     @GetMapping("/delete/{id}")
@@ -62,14 +62,14 @@ public class TaskController {
         TaskEntity task = taskService.getTaskById(id).orElseThrow(() -> new IllegalArgumentException("Invalid task ID"));
         taskService.deleteTask(id);
 
-        return "redirect:/category/categoryPage" + task.getCategory().getId();
+        return "redirect:/categories/categoryPage" + task.getCategory().getId();
     }
 
     @GetMapping("/cancel/{id}")
     public String cancelEditTask(@PathVariable Long id){
         TaskEntity task = taskService.getTaskById(id).orElseThrow(() -> new IllegalArgumentException("Invalid task ID"));
 
-        return "redirect:/category/categoryPage" + task.getCategory().getId();
+        return "redirect:/categories/categoryPage" + task.getCategory().getId();
     }
 
 }

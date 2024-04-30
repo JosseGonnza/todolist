@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/category")
+@RequestMapping("/categories")
 @CrossOrigin(origins = "http://localhost:4200")
 public class CategoryController {
 
@@ -41,7 +41,7 @@ public class CategoryController {
         category.setUser(user);
 
         categoryService.createCategory(category);
-        return "redirect:/category/home";
+        return "redirect:/categories/home";
     }
 
     @GetMapping("/categoryPage/{id}")
@@ -81,7 +81,7 @@ public class CategoryController {
     public String cancelEditCategory(@PathVariable Long id) {
         CategoryEntity category = categoryService.getCategoryById(id).orElseThrow(() -> new IllegalArgumentException("Invalid category ID"));
 
-        return "redirect/category/categoryPage";
+        return "redirect/categories/categoryPage";
     }
 
 }
