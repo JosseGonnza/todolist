@@ -7,7 +7,13 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideClientHydration(),importProvidersFrom(HttpClientModule),
-    importProvidersFrom(CommonModule), provideHttpClient(withFetch()), importProvidersFrom(FormsModule),
-  importProvidersFrom(RouterModule.forRoot(routes)), importProvidersFrom(RouterLink)]
+  providers: [
+    provideRouter(routes),
+    provideClientHydration(),
+    importProvidersFrom(HttpClientModule),
+    importProvidersFrom(CommonModule),
+    provideHttpClient(),
+    importProvidersFrom(FormsModule),
+    importProvidersFrom(RouterModule.forRoot(routes)),
+    importProvidersFrom(RouterLink)]
 };

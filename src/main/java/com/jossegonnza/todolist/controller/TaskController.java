@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDateTime;
 
 @Controller
-@RequestMapping("/task")
+@RequestMapping("/tasks")
 @CrossOrigin(origins = "http://localhost:4200")
 public class TaskController {
 

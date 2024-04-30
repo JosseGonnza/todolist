@@ -10,7 +10,7 @@
         <div class="shape shape-left"></div>
         <div class="shape shape-right"></div>
     </div>
-    <form>
+    <form (ngSubmit)="register(formData)">
         <h3>Registro</h3>
 
         <label for="name">Nombre</label>
@@ -30,7 +30,7 @@
 
         <button>Registrarse</button>
         <div class="register">
-            <p class="text-center">¿Ya tienes una cuenta? <a>Iniciar sesión</a></p>
+            <p class="text-center">¿Ya tienes una cuenta? <a routerLink="/" href="/">Iniciar sesión</a></p>
         </div>
     </form>
 </body>
