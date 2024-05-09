@@ -9,7 +9,7 @@ export class AuthService {
 
   private http = inject( HttpClient );
 
-  registerUser(username: string) {
-    return this.http.post(`${this.baseUrl}/register`, username)
+  registerUser(username: string, name : string, lastname : string, email : string, password : string) {
+    return this.http.post(`${this.baseUrl}/register`, {username : username, name : name, lastname : lastname, email : email, password : password});
   }
 }

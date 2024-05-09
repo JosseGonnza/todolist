@@ -3,7 +3,7 @@ import { RouterLink, RouterModule, provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormControl, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
@@ -15,5 +15,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
     importProvidersFrom(FormsModule),
     importProvidersFrom(RouterModule.forRoot(routes)),
-    importProvidersFrom(RouterLink)]
+    importProvidersFrom(RouterLink),
+    importProvidersFrom(FormBuilder),
+    importProvidersFrom(FormControl)]
 };
