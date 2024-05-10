@@ -32,17 +32,17 @@ public class CategoryController {
         return categoryService.getCategoryById(id);
     }
 
-    @PostMapping
+    @PostMapping("/addCategory")
     public void createCategory(@RequestBody CategoryEntity category) {
         categoryService.createCategory(category);
     }
 
-    @PutMapping
+    @PutMapping("/updateCategory")
     public void updateCategory(@RequestBody Long id, CategoryEntity category) {
         categoryService.updateCategory(id, category);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/deleteCategory")
     public void deleteCategoryById(@PathVariable Long id) {
         categoryService.deleteCategoryById(id);
     }

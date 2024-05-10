@@ -5,10 +5,8 @@ import com.jossegonnza.todolist.exceptions.UserNotExist;
 import com.jossegonnza.todolist.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
-import java.security.InvalidParameterException;
-
+//http://localhost:8080/swagger-ui/index.html SWAGGER
 
 @RestController
 @RequestMapping("/")
