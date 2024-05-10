@@ -19,7 +19,7 @@ export class UserService {
       username : username,
       password : password
     }).pipe(tap(response =>
-      {console.log(response)}
+      this.router.navigate(['/categories/home'])
     ),catchError(error => {return of(error)}));
   }
 

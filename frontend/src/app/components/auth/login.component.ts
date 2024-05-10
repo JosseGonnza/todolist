@@ -30,8 +30,8 @@ export class LoginComponent implements OnInit{
   onSubmit():void {
     this.userService.loginUser(
       this.username,
-      this.password).subscribe;
+      this.password).subscribe();
 
-    this.userService.register();
+
   }
 }
