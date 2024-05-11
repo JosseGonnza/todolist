@@ -8,7 +8,7 @@ import { catchError, of, tap } from 'rxjs';
 export class AuthService {
   private urlRegister: string = 'http://localhost:8080/register';
 
-  private http = inject( HttpClient );
+  constructor(private http: HttpClient) {};
 
   registerUser(username: string, name : string, lastname : string, email : string, password : string) {
     return this.http.post(this.urlRegister, {
