@@ -1,1 +1,54 @@
-<p>category-list works!</p>
+<html lang="en">
+<head>
+  <!-- Design by foolishdeveloper.com -->
+    <title>Login</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="category-list.component.css">
+</head>
+<body>
+  <div class="background">
+    <div class="shape shape-left"></div>
+    <div class="shape shape-right"></div>
+  </div>
+
+  <div class="container">
+    <div class="category-list">
+      <div class="category">
+        <h3>Categoría 1</h3>
+        <button class="add-task">Crear tarea</button>
+        <ul class="task-list">
+          <!-- Aquí se añadirán las tareas -->
+        </ul>
+      </div>
+      <!-- Más categorías se añadirían aquí -->
+    </div>
+    <button class="add-category">Añadir categoría</button>
+  </div>
+
+  <!-- Ventana emergente para añadir categoría -->
+  <div id="add-category-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Añadir categoría</h2>
+      <input type="text" placeholder="Nombre de la categoría">
+      <textarea placeholder="Descripción"></textarea>
+      <button class="create-category">Crear categoría</button>
+    </div>
+  </div>
+
+  <!-- Ventana emergente para añadir tarea -->
+  <div id="add-task-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Añadir tarea</h2>
+      <input type="text" placeholder="Título">
+      <textarea placeholder="Contenido"></textarea>
+      <button class="create-task">Crear tarea</button>
+    </div>
+  </div>
+
+
+</body>
+</html>
